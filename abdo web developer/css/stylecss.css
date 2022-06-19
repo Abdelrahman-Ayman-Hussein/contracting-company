@@ -1,0 +1,207 @@
+body{
+    font-family: 'Varela Round', sans-serif;
+}
+button{
+    font-family: inherit;/*خد نفس الفونت فاميلي*/
+}
+/*لتحديد كافة العناصر */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*css3*/
+}
+                    /*header*/
+.container{
+    width: 80%;
+    /* height: 30px; */
+    margin: auto;
+    /* background-color: blueviolet; */
+}
+.header{
+    background: rgba(255, 224, 224, 0.25);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    
+}
+.header .logo {
+    width: 40%;
+    /* background: pink; */
+    float: left;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+/* .header li{
+    
+} */
+.header .nav {
+    width: 60%;
+    /* background: brown; */
+    float: right;
+    list-style: none;
+    text-align: center;
+    margin-top: 1.85rem;
+    
+}
+.nav-home{
+    margin-left: .1rem;
+}
+.clear { /* لحل مشكلة الفلوت *//*to solve float problem*/
+    clear: both;
+}
+.header-cotent{ /*to solve float problem*/
+    /* overflow: hidden; */
+}
+.header .logo img {
+    width:5.5rem;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.header .logo img:hover{
+    background-color: rgba(245, 242, 144, 0.631);
+    transition: 1.4s ;
+}
+.header .nav > li {
+    display: inline-block;
+    padding: 3px;
+    margin:-5px;
+    
+}
+.dropdown{
+    position: relative;
+}
+.dropdown-blog{
+    position: absolute;
+    list-style: none;
+    width: 5.5rem;
+    text-align: center;
+    justify-content: center;
+    top: 100%;
+    left: -40%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s , visibility 1s;
+}
+.dropdown:hover .dropdown-blog{
+    opacity: 1;
+    visibility: visible;
+}
+.dropdown-blog a{
+    text-decoration: none;
+    color: white;
+    background-color: rgba(133, 129, 83, 0.518);
+    padding: .2rem;
+}
+.dropdown-blog a:hover{
+    background-color:rgba(201, 195, 125, 0.709) ;
+    transition: .9s;
+}
+.header .nav > li > a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 7px;
+    font-size: 13px ;
+    /* transition: width 1s ; */
+}
+.header .nav > li > a.active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: darkgoldenrod;
+    transition: width .6s ;
+
+}
+.header .nav > li > a::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: darkgoldenrod;
+    transition: width .6s ;
+
+}
+.header .nav > li > a:hover::after {
+    width: 100%;
+}
+/*لو  فيه صوره عليه كلام تتحط لال في css bg*/
+
+/* Home  section*/
+.home {
+    height: 100vh;
+    background-image: url(../hombg.jpg);
+    color: aquamarine;
+    /* background-position: center; */
+    background-size: cover;/*خلي الصوره على قد العرض */
+    position: relative;
+
+}
+
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.463);
+}
+.home-content
+{
+    background-color: rgba(37, 2, 7, 0.22);
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 70vw;
+    height: 30%;
+    letter-spacing: .02rem;
+    line-height: 1.7rem;
+}
+.home-h{
+    color: darkkhaki;
+    font-size: 3rem;
+    line-height: 2.5rem;
+}
+.home-content p {
+    color: rgb(133, 129, 83);
+    font-size: 1.3rem;
+}
+.home-content button {
+    background: rgba(133, 129, 83, 0.518);
+    block-size: 2.2rem ;
+    padding: 0 1.3rem;
+    color: rgba(254, 255, 176, 0.697);
+    border: 0;
+    margin:.4rem;
+    border-radius: 5%;
+    cursor: pointer; /*شكل الماوث*/
+}
+.home-content button:hover{
+    background: rgb(133, 129, 83);
+    /* opacity: 3; */
+}
+.hover-opacity{
+    transition: 1.2s;
+}
+/* .hover-opacity:hover{
+    opacity: 8;
+} */
+
+/* About section*/
+/* Portfolio  section*/
+/* Services  section*/
+/* Prices   section*/
+/* Team  section*/
+/* Blog  section*/
+/* Contact  section*/
+
+
+
+
+
+
+
